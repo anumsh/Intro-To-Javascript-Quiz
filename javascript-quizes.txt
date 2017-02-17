@@ -1,0 +1,172 @@
+/* Intro to JavaScript QUIZ[SOLVED]
+Chapter - Data Types and Variables
+Total Quiz-11
+*/
+
+Quiz-1
+Write an expression that uses at least 3 different arithmetic operators.
+The expression should equal 42.
+Hint: +, -, *, /, and % are possible arithmetic operators
+
+Code:
+// this expression equals 4, change it to equal 42
+console.log(1 + 5 - 2 + 38);
+console.log(80/2 +10 -8);
+console.log(2%4 +40);
+
+Output:
+42
+42
+42
+
+Quiz-2
+To convert Celsius to Fahrenheit, you can use the following formula:
+
+F=C×1.8+32
+
+Code:
+var celsius = 12;
+var fahrenheit = celsius* 1.8 + 32;
+
+console.log(fahrenheit);
+
+Output:
+53.6
+
+Quiz-3
+Create a string with the name of your favorite food. The first letter of the string should be capitalized.
+
+Code:
+console.log("Pizza");
+
+Output:
+Pizza
+
+Quiz-4
+Fix the right side expression so it evaluates to true.
+
+"ALL Strings are CrEaTeD equal" == "All STRINGS are CrEaTED Equal"
+
+Code:
+var answer = "ALL Strings are CrEaTeD equal" == "ALL Strings are CrEaTeD equal";
+console.log(answer);
+
+Output:
+True
+
+Quiz-5
+Build a single string that resembles the following joke.
+
+Why couldn't the shoes go out and play?
+They were all "tied" up!
+
+Code:
+var joke = "Why couldn't the shoes go out and play? \n They were all \"tied\" up!";
+console.log(joke);
+
+Output:
+Why couldn't the shoes go out and play?
+ They were all "tied" up!
+
+ Quiz-6
+ Build a string using concatenation by combining the lines from this famous haiku poem by Yosa Buson.
+
+Blowing from the west
+Fallen leaves gather
+In the east.
+
+Code:
+var haiku = "Blowing from the west\n" + "Fallen leaves gather\n" + "In the east." ;
+console.log(haiku);
+
+Output:
+Blowing from the west
+Fallen leaves gather
+In the east.
+
+Quiz-7
+Define two variables called thingOne and thingTwo and assign them values.
+Print the values of both variables in one console.log statement using concatenation.
+For example - red blue
+where "red" is the value of thingOne and "blue" is the value of thingTwo.
+
+Code:
+var thingOne="red"; var thingTwo="blue";
+console.log(thingOne + thingTwo);
+
+Output:
+red blue
+
+Quiz-8
+Create a variable called fullName and assign it your full name as a string.
+
+Code:
+var fullName = "anum sharma";
+
+Output:
+NA
+
+Quiz-9
+Create a variable called bill and assign it the result of 10.25 + 3.99 + 7.15
+Next, create a variable called tip and assign it the result of multiplying bill by a 15% tip
+rate. Finally, add the bill and tip together and store it into a variable called total.
+Print the total to the JavaScript console.
+
+To use toFixed() pass it the number of decimal points you want to use.
+For example, if total equals 3.9860, then total.toFixed(2) would return 3.99.
+
+Code:
+var bill = 10.25 + 3.99 + 7.15;
+var tip = 0.15 * bill;
+var total = tip + bill;
+console.log("$"+ total.toFixed(2));
+
+Output:
+$24.60
+
+Quiz-10
+Mad Libs is a word game where players have fun substituting words for blanks in a story.
+For this exercise, use the adjective variables below to fill in the blanks
+and complete the following message.
+
+"The Intro to JavaScript course is __________. James and Julia are so __________.
+I cannot wait to work through the rest of this __________ content!"
+var adjective1 = "amazing";
+var adjective2 = "fun";
+var adjective3 = "entertaining";
+Assign the resulting string to a variable called madLib.
+
+Code:
+var adjective1 = "amazing";
+var adjective2 = "fun";
+var adjective3 = "entertaining";
+
+// your code goes here
+
+var madLib = "The Intro to JavaScript course is " + adjective1 + ". James and Julia are so " + adjective2 + ". I cannot wait to work through the rest of this " + adjective3 +" content!";
+console.log(madLib);
+
+Output:
+The Intro to JavaScript course is amazing. James and Julia are so fun. I cannot wait to work through the rest of this entertaining content!
+
+Quiz-11
+Here is an awesome messages:
+
+"Hi, my name is Julia. I love cats. In my spare time, I like to play video games."
+
+Declare and assign values to three variables for each part of the sentence that changes
+ (firstName, interest, and hobby).
+Use your variables and string concatenation to create your own awesome message
+and store it in an awesomeMessage variable.
+Finally, print your awesome message to the JavaScript console.
+
+Code:
+var firstName = "Julia";
+var interest = "cats";
+var hobby = "play video games";
+
+var awesomeMessage = "Hi, my name is "+ firstName + "." + " I love " + interest + "." +  " In my spare time, I like to "+ hobby + ".";
+console.log(awesomeMessage);
+
+Output:
+Hi, my name is Julia. I love cats. In my spare time, I like to play video games.
