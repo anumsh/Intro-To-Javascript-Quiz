@@ -111,3 +111,100 @@ Output:
 Ms. Van Cleve did it in the gallery with the trophy!
 
 Quiz-4
+If you're like me, finding the right size t-shirt can sometimes be a challenge. What size am I? What's the difference between S (small), M (medium), and L (large)? I usually wear L, but what if I need an XL (extra large)?
+
+Code:
+var shirtWidth = 19;
+var shirtLength = 27;
+var shirtSleeve = 8.36;
+
+// your code goes here
+
+if (shirtWidth >=18 && shirtWidth <20 && shirtLength >=28 && shirtLength <29 && shirtSleeve >= 8.13 && shirtSleeve < 8.38) {
+    console.log("S");
+}
+else if (shirtWidth >=20 && shirtWidth <22 && shirtLength >=29 && shirtLength <30 && shirtSleeve >= 8.38 && shirtSleeve < 8.63) {
+    console.log("M");
+}
+else if (shirtWidth >=22 && shirtWidth <24 && shirtLength >=30 && shirtLength <31 && shirtSleeve >= 8.63 && shirtSleeve < 8.88) {
+    console.log("L");
+}
+else if (shirtWidth >=24 && shirtWidth <26 && shirtLength >=31 && shirtLength <33 && shirtSleeve >= 8.88 && shirtSleeve < 9.63) {
+    console.log("XL");
+}
+else if (shirtWidth >=26 && shirtWidth <28 && shirtLength >=33 && shirtLength <34 && shirtSleeve >= 9.63 && shirtSleeve < 10.13) {
+    console.log("2XL");
+}
+else if ((shirtWidth === 28) && (shirtLength === 34) && (shirtSleeve === 10.13)) {
+    console.log("3XL");
+}
+else {
+    console.log("N/A");
+}
+
+Output:
+N/A
+
+Quiz-5
+From the smallest of creatures to the largest of animals, inevitably every living, breathing thing must ingest other organisms to survive. This means that all animals will fall within one of the three consumer-based categories based on the types of food that they eat.
+
+Animals that eat only plants are called herbivores
+Animals that eat only other animals are called carnivores
+Animals that eat both plants and animals are called omnivores
+
+Code:
+var eatsPlants = false;
+var eatsAnimals = true;
+var category = (eatsPlants && eatsAnimals) ? "omnivore" : (eatsAnimals) ? "carnivore" : (eatsPlants) ? "herbivore" : undefined ;
+console.log(category);
+
+Output:
+carnivore
+
+Quiz-6
+Write a switch statement to set the average salary of a person
+based on their type of completed education.
+
+Code:
+var education = "no high school diploma";
+
+// set the value of this based on a person's education
+var salary;
+
+// your code goes here
+switch  (education) {
+    case "no high school diploma":
+        salary="$25,636/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "a high school diploma":
+        salary="$35,256/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "an Associate's degree":
+        salary="$41,496/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "a Bachelor's degree":
+        salary="$59,124/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "a Master's degree":
+        salary="$69,732/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "a Professional degree":
+        salary="$89,960/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "a Doctoral degree":
+        salary="$84,396/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    default:
+        console.log ("nothing");
+        break;
+}
+
+Output:
+In 2015, a person with no high school diploma earned an average of $25,636/year.
