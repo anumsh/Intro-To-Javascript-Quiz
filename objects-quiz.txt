@@ -1,0 +1,114 @@
+/* Intro to JavaScript QUIZ[SOLVED]
+Chapter - Objects
+Total Quiz-6
+*/
+
+Quiz-1
+Using the umbrella example from the previous video, see if you can follow the example open() method and create the close() method.
+
+Code:
+var umbrella = {
+    color: "pink",
+    isOpen: true,
+    open: function() {
+        if (umbrella.isOpen === true) {
+            return "The umbrella is already opened!";
+        } else {
+            umbrella.isOpen = true;
+            return "Julia opens the umbrella!";
+        }
+    },
+    close: function() {
+        if(umbrella.isOpen === false) {
+            return "The umbrella is already closed!";
+        } else {
+            umbrella.isOpen = false;
+            return "Julia closed the umbrella";
+        }
+    }
+};
+
+Quiz-2
+Create a breakfast object to represent the following menu item:
+
+The Lumberjack - $9.95
+eggs, sausage, toast, hashbrowns, pancakes
+The object should contain properties for the name, price, and ingredients.
+
+Code:
+var breakfast = {
+    name:"The Lumberjack",
+    price: "$9.95",
+    ingredients: ["eggs","sausage","toast","hashbrowns","pancakes"]
+}
+
+Quiz-3
+add a printAccountSummary() method that returns the following account message:
+
+Welcome!
+Your balance is currently $1000 and your interest rate is 1%. in bankAccount object.
+
+Code:
+var savingsAccount = {
+    balance: 1000,
+    interestRatePercent: 1,
+    deposit: function addMoney(amount) {
+        if (amount > 0) {
+            savingsAccount.balance += amount;
+        }
+    },
+    withdraw: function removeMoney(amount) {
+        var verifyBalance = savingsAccount.balance - amount;
+        if (amount > 0 && verifyBalance >= 0) {
+            savingsAccount.balance -= amount;
+        }
+    },
+    printAccountSummary:function  printAccountSummary() {
+        return "Welcome!\n"+ "Your balance is currently $"  + savingsAccount.balance + " and your interest rate is " + savingsAccount.interestRatePercent +"%."
+    }
+};
+
+console.log(savingsAccount.printAccountSummary());
+
+Quiz-4
+Which of the following are valid ways to access properties and call methods from the savingsAccount object?
+
+Answer:
+1. savingAccount.balance;   // using dot notation
+2. savingAccount["balance"];   // using bracket notation
+
+Quiz-5
+Create an object called facebookProfile. The object should have 3 properties:
+
+your name
+the number of friends you have, and
+an array of messages you've posted (as strings)
+The object should also have 4 methods:
+
+postMessage(message) - adds a new message string to the array
+deleteMessage(index) - removes the message corresponding to the index provided
+addFriend() - increases the friend count by 1
+removeFriend() - decreases the friend count by 1
+
+Output:
+var facebookProfile = {
+    name:"Anum Sharma",
+    friends:5,
+    messages:["hello","good morning"],
+    postMessage : function(message) {
+        return facebookProfile.messages.push(message);
+    } ,
+    addFriend : function() {
+        return facebookProfile.friends +=1;
+    } ,
+    removeFriend : function () {
+        return facebookProfile.friends -= 1;
+    },
+    deleteMessage : function(index) {
+        var remove= facebookProfile.messages.splice(index,1);
+        return remove
+    }
+};
+console.log(facebookProfile.friends);
+console.log((facebookProfile.addFriend()));
+console.log(facebookProfile.friends);
