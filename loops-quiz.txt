@@ -31,7 +31,7 @@ while (x <=20) {
     }
     x=x+1;
     }
-        
+
 Output:
 1
 2
@@ -74,7 +74,7 @@ while (num >=0) {
         else if (num == 2){
             sub=num - 1;
            console.log(num +" bottles of juice on the wall! " + num+ " bottles of juice! Take one down, pass it around... "+ sub + " bottle of juice on the wall!");
-        } 
+        }
         else if (num === 1) {
             sub=num - 1;
            console.log(num +" bottle of juice on the wall! " + num+ " bottle of juice! Take one down, pass it around... "+ sub + " bottles of juice on the wall!");
@@ -108,7 +108,7 @@ hello 2
 hello 1
 
 
-Quiz-4 
+Quiz-4
 Write a for loop that prints out the factorial of the number 12:
 
 A factorial is calculated by multiplying a number by all the numbers below it. For instance, 3! or "3 factorial" is 3 * 2 * 1 = 6
@@ -119,9 +119,49 @@ var solution=1;
 for( var x=1;x<=12;x++)
 {
     solution=solution*x;
-    
+
 }
 console.log(solution);
 
 Output:
 479001600
+
+Quiz-5
+Theater seats often display a row and seat number to help theatergoers find their seats.
+If there are 26 rows (0 to 25) and 100 seats (0 to 99) in each row, write a nested for
+loop to print out all of the different seat combinations in the theater.
+
+Code:
+var row;
+var seat;
+for (row = 0; row <= 25; row++){
+for (seat = 0; seat <= 99; seat++){
+console.log(row + "-" + seat);
+}
+}
+
+
+Quiz-6
+Here is a for loop that's supposed to print the numbers 5 through 9. Fix the error!
+
+for (x < 10; x++) {
+  console.log(x);
+}
+
+Code:
+
+for (var x=5; x < 10; x++) {
+    console.log(x);
+}
+
+Quiz-7
+The for loop below has an error. Fix it!
+
+for (var k = 0 k < 200 k++) {
+  console.log(k);
+}
+
+Code:
+for (var k = 0; k < 200; k++) {
+    console.log(k);
+}
