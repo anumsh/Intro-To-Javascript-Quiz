@@ -1,0 +1,446 @@
+/* Intro to JavaScript QUIZ[SOLVED]
+Chapter - Conditionals
+Total Quiz- 10
+*/
+
+Quiz-1
+Create an array called udaciFamily and add "Julia", "James", and your name to the array. Then,
+print the udaciFamily to the console using console.log.
+
+Code:
+var udaciFamily=["Julia","James","Anum"];
+console.log(udaciFamily);
+
+Output:
+[ 'Julia', 'James', 'Anum' ]
+
+Quiz-2
+Create an array called crew to organize the Serenity’s crew and set it equal to the variables below . You don't need to type out the actual strings, just use the provided variables.
+
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
+Then, print the crew array to the console.
+
+Code:
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
+
+var crew=[captain,second,pilot,companion,mercenary,mechanic];
+console.log(crew);
+
+Output:
+[ 'Mal', 'Zoe', 'Wash', 'Inara', 'Jayne', 'Kaylee' ]
+
+Quiz-3
+Starting with this array of prices, change the prices of the
+1st, 3rd, and 7th elements in the array.
+
+var prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
+TIP: The 1st element of any array has an index of 0.
+Afterwards, print out the prices array to the console.
+
+Code:
+var prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
+
+prices[0]=2.45;
+prices[2]=88.67;
+prices[6]=55.55;
+console.log(prices);
+
+Output:
+[ 2.45, 48.11, 88.67, 8.5, 9.99, 1, 55.55, 67 ]
+
+Quiz-4
+James was creating an array with the colors of the rainbow,
+and he forgot some colors. The standard rainbow colors are usually listed in this order:
+
+var rainbow = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"];
+but James had this:
+
+var rainbow = ["Red", "Orange", "Blackberry", "Blue"];
+Using only the splice() method, insert the missing colors
+ into the array, and remove the color "Blackberry" by following these steps:
+
+Remove "Blackberry"
+Add "Yellow" and "Green"
+Add "Purple"
+
+Code:
+var rainbow = ["Red", "Orange", "Blackberry", "Blue"];
+
+rainbow.splice(2,1,"Yellow","Green");
+rainbow.splice(5,0,"Purple")
+console.log(rainbow);
+
+Output:
+[ 'Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple' ]
+
+Quiz-5
+Consider the following array.
+
+var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+
+Create a function called hasEnoughPlayers() that takes the team array
+ as an argument and returns true or false depending on if the array has at least seven players.
+
+Code:
+var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+
+console.log(team.length);
+function hasEnoughPlayers(t) {
+    if (t.length >= 7) {
+        return true;
+    }
+    else {
+        return false;
+
+    }}
+
+console.log(hasEnoughPlayers(team));
+
+Output:
+7
+true
+
+Quiz-6
+In an earlier exercise, you created a crew array to represent Mal’s crew
+from the hit show Firefly.
+
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
+
+var crew = [captain, second, pilot, companion, mercenary, mechanic];
+Later in the show, Mal takes on three new crew members named "Simon", "River", and "Book". Use the push() method to add the three new crew members to the crew array.
+
+var doctor = "Simon";
+var sister = "River";
+var shepherd = "Book";
+
+Code:
+
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
+
+var crew = [captain, second, pilot, companion, mercenary, mechanic];
+
+var doctor = "Simon";
+var sister = "River";
+var shepherd = "Book";
+
+crew.push(doctor,sister,shepherd);
+console.log(crew);
+
+Output:
+[ 'Mal',
+  'Zoe',
+  'Wash',
+  'Inara',
+  'Jayne',
+  'Kaylee',
+  'Simon',
+  'River',
+  'Book' ]
+
+Quiz-7
+***Determine which of these methods would be best for reversing elements in this array:
+
+var reverseMe = ["h", "e", "l", "l", "o"];
+
+Answer: reverse()
+
+reverseMe.reverse();
+Returns: [ 'o', 'l', 'l', 'e', 'h' ]
+
+***What would be the best array method to sort the elements in this array:
+
+var sortMe = [2, 1, 10, 7, 6];
+
+Answer: sort()
+
+sortMe.sort();
+Returns: [1, 2, 6, 7, 10]
+
+***What method(s) could you use to remove the first element from this array:
+
+var removeFirstElement = ["a", "b", "c"];
+
+Answer:
+shift() -will remove the first element from an array.
+splice() -can be used if you specify the index of the first element,
+and indicate that you want to delete 1 element.
+slice()- allows you to create a copy of the array between two indices.
+You just exclude the index of the first element!
+
+*** What method would be best for changing this array into a string?
+
+var turnMeIntoAString = ["U", "d", "a", "c", "i", "t", "y"];
+
+Answer: join()
+
+turnMeIntoAString.join('');
+Returns: Udacity
+
+Quiz-8
+Use the array's forEach() method to loop over the following array and add 100 to each
+of the values if the value is divisible by 3. Print the test array to the console.
+var test = [13, 929, 11, 9, 199, 1000, 7, 1, 399, 37, 4, 19, 1938, 3775,
+            299, 58, 209, 48, 69, 299, 5, 9, 20, 58, 39, 59, 79,29, 1, 39,
+            111, 7, 9, 29, 1, 58, 28, 599];
+Code:
+var test = [13, 929, 11, 9, 199, 1000, 7, 1, 399, 37, 4,
+19, 1938, 3775, 299, 58, 209, 48, 69, 299, 5, 9, 20, 58,
+39, 59, 79,29, 1, 39, 111, 7, 9, 29, 1, 58, 28, 599];
+
+// your code goes here
+
+function third(num,index,array){
+    if (num % 3 ===0){
+        num +=100
+        array[index]= num;
+    }
+    console.log(num);
+
+}
+
+test.forEach(third);
+
+Output:
+13
+929
+11
+109
+199
+1000
+7
+1
+499
+37
+4
+19
+2038
+3775
+299
+58
+209
+148
+169
+299
+5
+109
+20
+58
+139
+59
+79
+29
+1
+139
+211
+7
+109
+29
+1
+58
+28
+599
+
+Quiz-9
+Use the map() method to take the array of bill amounts shown below,
+and create a second array of numbers called totals
+that shows the bill amounts with a 15% tip added.
+
+var bills = [50.23, 19.12, 34.01, 100.11, 12.15, 9.90,
+            29.11, 12.99, 10.00, 99.22, 102.20, 100.10, 6.77, 2.22];
+Print out the new totals array using console.log.
+
+Code:
+var bills = [50.23, 19.12, 34.01, 100.11, 12.15, 9.90,
+29.11, 12.99, 10.00, 99.22, 102.20, 100.10, 6.77, 2.22];
+
+var totals= bills.map(function(number,index,array) {
+                number+= number*0.15;
+               return Number((number.toFixed(2)));
+            });
+
+console.log(totals);
+
+Output:
+[ 57.76,
+  21.99,
+  39.11,
+  115.13,
+  13.97,
+  11.38,
+  33.48,
+  14.94,
+  11.5,
+  114.1,
+  117.53,
+  115.11,
+  7.79,
+  2.55 ]
+
+Quiz-10
+Use a nested for loop to take the numbers array below and replace all
+of the values that are divisible by 2 (even numbers)
+with the string "even" and all other numbers with the string "odd".
+
+Code:
+var numbers = [
+    [ 243, 12, 23, 12, 45, 45, 78, 66, 223, 3 ],
+    [ 34, 2, 1, 553, 23, 4, 66, 23, 4, 55 ],
+    [ 67, 56, 45, 553, 44, 55, 5, 428, 452, 3 ],
+    [ 12, 31, 55, 445, 79, 44, 674, 224, 4, 21 ],
+    [ 4, 2, 3, 52, 13, 51, 44, 1, 67, 5 ],
+    [ 5, 65, 4, 5, 5, 6, 5, 43, 23, 4424 ],
+    [ 74, 532, 6, 7, 35, 17, 89, 43, 43, 66 ],
+    [ 53, 6, 89, 10, 23, 52, 111, 44, 109, 80 ],
+    [ 67, 6, 53, 537, 2, 168, 16, 2, 1, 8 ],
+    [ 76, 7, 9, 6, 3, 73, 77, 100, 56, 100 ]
+];
+
+for(var r=0;r < numbers.length; r ++){
+    for (var c=0; c< numbers[r].length;c++){
+        if (numbers[r][c] % 2 === 0) {
+            numbers[r][c]="even";
+            console.log(numbers[r][c]);
+        }
+        else {
+            numbers[r][c]="odd";
+            console.log(numbers[r][c]);
+        }
+        }
+    }
+console.log(numbers);
+
+/*  Another method with Map
+var result = numbers.map(function(innerArray) {
+  return innerArray.map(
+    function(value) {
+      if (value % 2) {
+        return "odd";
+      }
+      return "even";
+    });
+});
+
+console.log(result);
+*/
+
+Output:
+[ [ 'odd',
+    'even',
+    'odd',
+    'even',
+    'odd',
+    'odd',
+    'even',
+    'even',
+    'odd',
+    'odd' ],
+  [ 'even',
+    'even',
+    'odd',
+    'odd',
+    'odd',
+    'even',
+    'even',
+    'odd',
+    'even',
+    'odd' ],
+  [ 'odd',
+    'even',
+    'odd',
+    'odd',
+    'even',
+    'odd',
+    'odd',
+    'even',
+    'even',
+    'odd' ],
+  [ 'even',
+    'odd',
+    'odd',
+    'odd',
+    'odd',
+    'even',
+    'even',
+    'even',
+    'even',
+    'odd' ],
+  [ 'even',
+    'even',
+    'odd',
+    'even',
+    'odd',
+    'odd',
+    'even',
+    'odd',
+    'odd',
+    'odd' ],
+  [ 'odd',
+    'odd',
+    'even',
+    'odd',
+    'odd',
+    'even',
+    'odd',
+    'odd',
+    'odd',
+    'even' ],
+  [ 'even',
+    'even',
+    'even',
+    'odd',
+    'odd',
+    'odd',
+    'odd',
+    'odd',
+    'odd',
+    'even' ],
+  [ 'odd',
+    'even',
+    'odd',
+    'even',
+    'odd',
+    'even',
+    'odd',
+    'even',
+    'odd',
+    'even' ],
+  [ 'odd',
+    'even',
+    'odd',
+    'odd',
+    'even',
+    'even',
+    'even',
+    'even',
+    'odd',
+    'even' ],
+  [ 'even',
+    'odd',
+    'odd',
+    'even',
+    'odd',
+    'odd',
+    'odd',
+    'even',
+    'even',
+    'even' ] ]
