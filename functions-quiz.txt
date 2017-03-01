@@ -1,0 +1,18 @@
+/* Intro to JavaScript QUIZ[SOLVED]
+Chapter - Functions
+Total Quiz-6
+*/
+
+Quiz-1
+Declare a function called laugh() that returns "hahahahahahahahahaha!".
+ Print the value returned from the laugh() function to the console.
+
+ Code:
+ function laugh() {
+return "hahahahahahahahahaha!";
+}
+
+console.log(laugh());
+
+Output:
+hahahahahahahahahaha!
