@@ -82,6 +82,45 @@ while (num >=0) {
            num = num - 1;
     }
 
+/*
+ * Programming Quiz: Countdown, Liftoff! (4-3)
+ * 
+ * Using a while loop, print out the countdown output above.
+ */
+
+// your code goes here
+var countDown = 60;
+
+// it must run even when count is 0.
+while(countDown + 1){
+    var printString;
+    switch(countDown){
+        case 50:
+            printString = "Orbiter transfers from ground to internal power";
+            break;
+        case 31:
+            printString = "Ground launch sequencer is go for auto sequence start";
+            break;
+        case 16:
+            printString ="Activate launch pad sound suppression system";
+            break;
+        case 10:
+            printString ="Activate main engine hydrogen burnoff system";
+            break;
+        case 6:
+            printString ="Main engine start";
+            break;
+        case 0:
+            printString ="Solid rocket booster ignition and liftoff!";
+            break;
+        default:
+            printString = "T-" + countDown + " seconds";
+    }
+    console.log(printString);
+    countDown = countDown - 1;
+}
+
+
 Quiz-3
 Rewrite the following while loop as a for loop:
 
