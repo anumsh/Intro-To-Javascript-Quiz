@@ -81,6 +81,27 @@ while (num >=0) {
         }
            num = num - 1;
     }
+    
+Code 2:
+/*
+ * Programming Quiz: 99 Bottles of Juice (4-2)
+ *
+ * Use the following `while` loop to write out the song "99 bottles of juice".
+ * Log the your lyrics to the console.
+ *
+ * Note
+ *   - Each line of the lyrics needs to be logged to the same line.
+ *   - The pluralization of the word "bottle" changes from "2 bottles" to "1 bottle" to "0 bottles".
+ */
+
+var num = 99;
+
+while (num > 0) {
+    bottlesString = num !== 1 ?  num + " bottles": num + " bottle"
+    bottlesnextString = num - 1 !== 1 ?  (num - 1) + " bottles": (num - 1) + " bottle"
+    console.log(bottlesString + " of juice on the wall! " + bottlesString + " of juice! Take one down, pass it around... " + bottlesnextString + " of juice on the wall!");
+    num = num - 1;
+}
 
 Quiz-3
 Rewrite the following while loop as a for loop:
