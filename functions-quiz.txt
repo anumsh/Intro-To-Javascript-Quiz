@@ -43,20 +43,21 @@ that will accept an input (the triangle at its widest width) and will build a tr
 
 Code:
 function makeLine(length) {
-  var line = "";
-  for (var j = 1; j <= length; j++) {
-    line += "* "
-  }
-  return line + "\n";
-}
-
-function buildTriangle(num){
-    var buildtriangle="";
-    for (var i=1;i<=num;i++){
-        var make=makeLine(i);
-        buildtriangle += make;
+    var line = "";
+    for (var j = 1; j <= length; j++) {
+        line += "* ";
     }
-    return buildtriangle;
+    return line + "\n";
+}
+function buildTriangle(Linelength){
+    var output ="";
+    var i=1;
+    while(i <=Linelength){
+        var length =i;
+        output+= makeLine(length);
+    i++;
+  }
+    return output;
 }
 console.log(buildTriangle(10));
 
