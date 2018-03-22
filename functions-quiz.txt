@@ -22,16 +22,17 @@ Write a function called laugh() that takes one parameter,
 num that represents the number of "ha"s to return.
 
 Code:
-function laugh(num) {
-    var ha='';
-    for(var i=0;i<num;i=i+1) {
-        ha+="ha";
-        string=ha+"!";
-    }
-    return string;
+function laugh(num){
+   var the="";
+    while(num>0){
+      the +="ha";
+      num--;
+ }
+ return the + "!";
 }
 
-console.log(laugh(3));
+console.log(laugh(10));
+
 
 Output:
 hahaha!
