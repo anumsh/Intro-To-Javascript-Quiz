@@ -16,21 +16,14 @@ Code:
 
 var x = 1;
 
-while (x <=20) {
-    if (x%3 === 0 && x%5 === 0) {
-        console.log("JuliaJames");
-    }
-    else if (x%5 === 0) {
-        console.log("James");
-    }
-    else if (x%3 === 0){
-        console.log("Julia");
-    }
-    else {
-        console.log(x);
-    }
-    x=x+1;
-    }
+while (x<=20) {
+    // check divisibility
+    // print Julia, James, or JuliaJames
+    // increment x
+var output = x%3==0 ? (x%5==0 ? "JuliaJames" : "Julia") : (x%5==0 ? "James" : x);
+console.log(output);    
+x++;
+}
 
 Output:
 1
@@ -64,23 +57,18 @@ Write a loop that prints out the following song. Starting at 99, and ending at 1
 1 bottle of juice on the wall! 1 bottle of juice! Take one down, pass it around... 0 bottles of juice on the wall!
 
 Code:
- var num = 99;
-
-while (num >=0) {
-       if  (num > 2) {
-           sub=num - 1;
-           console.log(num +" bottles of juice on the wall! " + num+ " bottles of juice! Take one down, pass it around... "+ sub + " bottles of juice on the wall!");
-       }
-        else if (num == 2){
-            sub=num - 1;
-           console.log(num +" bottles of juice on the wall! " + num+ " bottles of juice! Take one down, pass it around... "+ sub + " bottle of juice on the wall!");
-        }
-        else if (num === 1) {
-            sub=num - 1;
-           console.log(num +" bottle of juice on the wall! " + num+ " bottle of juice! Take one down, pass it around... "+ sub + " bottles of juice on the wall!");
-        }
-           num = num - 1;
-    }
+var num = 99;
+while (num>=1) {
+    // check value of num
+    // print lyrics using num
+    // don't forget to check pluralization on the last line!
+    // decrement num
+    var bottle = num >= 2 ? "bottles" : "bottle";
+    var output= num +" "+ bottle + " of juice on the wall! " + num + " "+  bottle + " of juice! Take one down, pass it around... " + (num= num-1)+ " " ;
+    var bot= num==1? "bottle" : "bottles";
+    output += bot +" of juice on the wall!";
+    console.log(output);
+}
 
 Quiz-3
 Rewrite the following while loop as a for loop:
