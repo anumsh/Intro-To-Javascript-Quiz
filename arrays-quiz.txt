@@ -93,17 +93,9 @@ Create a function called hasEnoughPlayers() that takes the team array
 
 Code:
 var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
-
-console.log(team.length);
-function hasEnoughPlayers(t) {
-    if (t.length >= 7) {
-        return true;
-    }
-    else {
-        return false;
-
-    }}
-
+function hasEnoughPlayers(team){
+    return team.length>=7 ? true: false;
+}
 console.log(hasEnoughPlayers(team));
 
 Output:
@@ -315,19 +307,12 @@ var numbers = [
     [ 76, 7, 9, 6, 3, 73, 77, 100, 56, 100 ]
 ];
 
-for(var r=0;r < numbers.length; r ++){
-    for (var c=0; c< numbers[r].length;c++){
-        if (numbers[r][c] % 2 === 0) {
-            numbers[r][c]="even";
-            console.log(numbers[r][c]);
-        }
-        else {
-            numbers[r][c]="odd";
-            console.log(numbers[r][c]);
-        }
-        }
-    }
-console.log(numbers);
+for(var row=0; row <numbers.length; row++){
+         for(var column=0; column<numbers[row].length; column++){
+        numbers[row][column] = (numbers[row][column]) %2===0? "even":"odd";
+         console.log(numbers[row][column]);
+     }
+ }
 
 /*  Another method with Map
 var result = numbers.map(function(innerArray) {
