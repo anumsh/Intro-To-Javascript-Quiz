@@ -71,6 +71,44 @@ while (num>=1) {
 }
 
 Quiz-3
+NASA's countdown to launch includes checkpoints where NASA engineers complete certain technical tasks. During the final minute, NASA has 6 tasks to complete:
+
+Orbiter transfers from ground to internal power (T-50 seconds)
+Ground launch sequencer is go for auto sequence start (T-31 seconds)
+Activate launch pad sound suppression system (T-16 seconds)
+Activate main engine hydrogen burnoff system (T-10 seconds)
+Main engine start (T-6 seconds)
+Solid rocket booster ignition and liftoff! (T-0 seconds)
+
+code:
+time=60;
+while(time >=0){
+    switch (time) {
+     case 50:
+         console.log("Orbiter transfers from ground to internal power");
+         break;
+     case 31:
+         console.log("Ground launch sequencer is go for auto sequence start");
+         break;
+     case 16:
+         console.log("Activate launch pad sound suppression system");
+         break;
+     case 10:
+         console.log("Activate main engine hydrogen burnoff system");
+         break;
+     case 6:
+         console.log("Main engine start");
+         break;
+     case 0:
+         console.log("Solid rocket booster ignition and liftoff!");
+         break;
+     default:
+         console.log("T-"+time + " seconds");
+    }
+    time--;
+}
+
+Quiz-4
 Rewrite the following while loop as a for loop:
 
 var x = 9;
@@ -96,7 +134,7 @@ hello 2
 hello 1
 
 
-Quiz-4
+Quiz-5
 Write a for loop that prints out the factorial of the number 12:
 
 A factorial is calculated by multiplying a number by all the numbers below it. For instance, 3! or "3 factorial" is 3 * 2 * 1 = 6
@@ -114,7 +152,7 @@ console.log(solution);
 Output:
 479001600
 
-Quiz-5
+Quiz-6
 Theater seats often display a row and seat number to help theatergoers find their seats.
 If there are 26 rows (0 to 25) and 100 seats (0 to 99) in each row, write a nested for
 loop to print out all of the different seat combinations in the theater.
@@ -129,7 +167,7 @@ console.log(row + "-" + seat);
 }
 
 
-Quiz-6
+Quiz-7
 Here is a for loop that's supposed to print the numbers 5 through 9. Fix the error!
 
 for (x < 10; x++) {
@@ -142,7 +180,7 @@ for (var x=5; x < 10; x++) {
     console.log(x);
 }
 
-Quiz-7
+Quiz-8
 The for loop below has an error. Fix it!
 
 for (var k = 0 k < 200 k++) {
