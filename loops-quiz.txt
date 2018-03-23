@@ -16,21 +16,14 @@ Code:
 
 var x = 1;
 
-while (x <=20) {
-    if (x%3 === 0 && x%5 === 0) {
-        console.log("JuliaJames");
-    }
-    else if (x%5 === 0) {
-        console.log("James");
-    }
-    else if (x%3 === 0){
-        console.log("Julia");
-    }
-    else {
-        console.log(x);
-    }
-    x=x+1;
-    }
+while (x<=20) {
+    // check divisibility
+    // print Julia, James, or JuliaJames
+    // increment x
+var output = x%3==0 ? (x%5==0 ? "JuliaJames" : "Julia") : (x%5==0 ? "James" : x);
+console.log(output);    
+x++;
+}
 
 Output:
 1
@@ -64,25 +57,58 @@ Write a loop that prints out the following song. Starting at 99, and ending at 1
 1 bottle of juice on the wall! 1 bottle of juice! Take one down, pass it around... 0 bottles of juice on the wall!
 
 Code:
- var num = 99;
-
-while (num >=0) {
-       if  (num > 2) {
-           sub=num - 1;
-           console.log(num +" bottles of juice on the wall! " + num+ " bottles of juice! Take one down, pass it around... "+ sub + " bottles of juice on the wall!");
-       }
-        else if (num == 2){
-            sub=num - 1;
-           console.log(num +" bottles of juice on the wall! " + num+ " bottles of juice! Take one down, pass it around... "+ sub + " bottle of juice on the wall!");
-        }
-        else if (num === 1) {
-            sub=num - 1;
-           console.log(num +" bottle of juice on the wall! " + num+ " bottle of juice! Take one down, pass it around... "+ sub + " bottles of juice on the wall!");
-        }
-           num = num - 1;
-    }
+var num = 99;
+while (num>=1) {
+    // check value of num
+    // print lyrics using num
+    // don't forget to check pluralization on the last line!
+    // decrement num
+    var bottle = num >= 2 ? "bottles" : "bottle";
+    var output= num +" "+ bottle + " of juice on the wall! " + num + " "+  bottle + " of juice! Take one down, pass it around... " + (num= num-1)+ " " ;
+    var bot= num==1? "bottle" : "bottles";
+    output += bot +" of juice on the wall!";
+    console.log(output);
+}
 
 Quiz-3
+NASA's countdown to launch includes checkpoints where NASA engineers complete certain technical tasks. During the final minute, NASA has 6 tasks to complete:
+
+Orbiter transfers from ground to internal power (T-50 seconds)
+Ground launch sequencer is go for auto sequence start (T-31 seconds)
+Activate launch pad sound suppression system (T-16 seconds)
+Activate main engine hydrogen burnoff system (T-10 seconds)
+Main engine start (T-6 seconds)
+Solid rocket booster ignition and liftoff! (T-0 seconds)
+
+code:
+time=60;
+while(time >=0){
+    switch (time) {
+     case 50:
+         console.log("Orbiter transfers from ground to internal power");
+         break;
+     case 31:
+         console.log("Ground launch sequencer is go for auto sequence start");
+         break;
+     case 16:
+         console.log("Activate launch pad sound suppression system");
+         break;
+     case 10:
+         console.log("Activate main engine hydrogen burnoff system");
+         break;
+     case 6:
+         console.log("Main engine start");
+         break;
+     case 0:
+         console.log("Solid rocket booster ignition and liftoff!");
+         break;
+     default:
+         console.log("T-"+time + " seconds");
+    }
+    time--;
+}
+
+Quiz-4
 Rewrite the following while loop as a for loop:
 
 var x = 9;
@@ -108,7 +134,7 @@ hello 2
 hello 1
 
 
-Quiz-4
+Quiz-5
 Write a for loop that prints out the factorial of the number 12:
 
 A factorial is calculated by multiplying a number by all the numbers below it. For instance, 3! or "3 factorial" is 3 * 2 * 1 = 6
@@ -126,7 +152,7 @@ console.log(solution);
 Output:
 479001600
 
-Quiz-5
+Quiz-6
 Theater seats often display a row and seat number to help theatergoers find their seats.
 If there are 26 rows (0 to 25) and 100 seats (0 to 99) in each row, write a nested for
 loop to print out all of the different seat combinations in the theater.
@@ -141,7 +167,7 @@ console.log(row + "-" + seat);
 }
 
 
-Quiz-6
+Quiz-7
 Here is a for loop that's supposed to print the numbers 5 through 9. Fix the error!
 
 for (x < 10; x++) {
@@ -154,7 +180,7 @@ for (var x=5; x < 10; x++) {
     console.log(x);
 }
 
-Quiz-7
+Quiz-8
 The for loop below has an error. Fix it!
 
 for (var k = 0 k < 200 k++) {
