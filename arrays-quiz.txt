@@ -184,8 +184,6 @@ Answer:
 shift() -will remove the first element from an array.
 splice() -can be used if you specify the index of the first element,
 and indicate that you want to delete 1 element.
-slice()- allows you to create a copy of the array between two indices.
-You just exclude the index of the first element!
 
 *** What method would be best for changing this array into a string?
 
